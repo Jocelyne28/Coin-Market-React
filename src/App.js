@@ -10,7 +10,7 @@ function App() {
 
 
   const getData = async ()  => {
-    const res = await axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1");
+    const res = await axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=5&page=1");
     console.log(res.data)
     setCoins(res.data)
   }
@@ -23,6 +23,7 @@ function App() {
   return (
     <div className="container">
       <h1 className='text-center'>Coin Market</h1>
+
       <div className='row'>
         <input type="text" placeholder='Search a Coin' className='form-control bg-dark text-light border-0 mt-4 text-center' onChange={e => setSearch(e.target.value)}/>
       </div>
