@@ -17,9 +17,6 @@ const CoinRow = ({coin, index}) => {
             >
               $ {coin.price_change_percentage_24h}
           </td>
-          {/* <td>
-          {coin.total_volume}
-          </td> */}
         </tr>
     )
 }

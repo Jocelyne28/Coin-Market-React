@@ -32,9 +32,7 @@ function App() {
     <div className="container">
       <h1 className='text-center'>Coin Market</h1>
       <div className='row'>
-        <input type="text" placeholder='Search a Coin' 
-        className='form-control bg-dark text-light border-0 mt-4 text-center' 
-        onChange={e => setSearch(e.target.value)}/>
+        <input type="text" placeholder='Search a Coin'className='form-control bg-dark text-light border-0 mt-4 text-center'onChange={e => setSearch(e.target.value)}/>
       </div>
       <TableCoins coins={coins} search={search} />
     </div>
