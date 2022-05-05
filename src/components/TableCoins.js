@@ -1,7 +1,7 @@
 import React from "react";
 import CoinRow from "./CoinRow";
 
-const titles = ['#', 'Coin', 'Price', 'Price Change', '24h Volume']
+const titles = ['#', 'Coin', 'Price', 'Price Change'];
 const TableCoins = ({coins, search}) => {
     const filteredCoins = coins.filter((coin) => coin.name.toLowerCase().includes(search.toLowerCase()) | coin.symbol.toLowerCase().includes(search.toLowerCase())
     );
@@ -15,8 +15,8 @@ const TableCoins = ({coins, search}) => {
             </tr>
         </thead>
         <tbody>
-            {filteredCoins.map ((coin, index) => (
-                <CoinRow coin={coin} key={index} index={index +1} />
+            {filteredCoins.map ((coin, index, symbol) => (
+                <CoinRow coin={coin} key={index} index={index +1} symbol={symbol}/>
             ))}
         </tbody>
     </table>)
