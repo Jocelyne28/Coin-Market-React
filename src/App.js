@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import axios from 'axios';
 import TableCoins from './components/TableCoins';
+import Card from './components/Card';
+import Convert from './components/Convert'
 
 function App() {
 
@@ -31,10 +33,13 @@ function App() {
   return (
     <div className="container">
       <h1 className='text-center'>Coin Market</h1>
+      <Card/>
       <div className='row'>
         <input type="text" placeholder='Search a Coin'className='form-control bg-dark text-light border-0 mt-4 text-center'onChange={e => setSearch(e.target.value)}/>
       </div>
       <TableCoins coins={coins} search={search} />
+      <h1 className='text-center'>Convert</h1>
+      <Convert/>
     </div>
   );
 }
